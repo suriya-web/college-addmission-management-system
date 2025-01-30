@@ -1,1 +1,1 @@
-# college-addmission-management-system
+# college-addmission-management-system using .net core mvc
