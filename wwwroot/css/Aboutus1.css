@@ -1,0 +1,70 @@
+﻿/* General Page Styling */
+
+
+
+body {
+    /*font-family: Arial, sans-serif;*/
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Main Heading (About Us) */
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+/* About Section Styling */
+.about-section {
+    width: 80%;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+    /* Title within About Section */
+    .about-section h1 {
+        font-size: 2rem;
+        color: #007bff;
+        margin-bottom: 15px;
+    }
+
+    /* Paragraph Styling */
+    .about-section p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+/* Responsive Adjustments for Smaller Screens */
+@media (max-width: 768px) {
+    .about-section {
+        width: 90%;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .about-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .about-section p {
+        font-size: 1rem;
+    }
+}
+
+
+
+    
+    

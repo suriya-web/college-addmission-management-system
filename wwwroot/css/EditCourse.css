@@ -1,0 +1,92 @@
+﻿/* General container styling */
+.form-container {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    padding: 20px 0;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+
+    /* Form styling */
+    .form-container form {
+        width: 100%;
+        max-width: 500px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+    }
+
+    /* Page title styling */
+    .form-container h1 {
+        text-align: center;
+        color: #007bff;
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    /* Label styling */
+    .form-container form label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+        color: #333;
+        font-size: 0.9rem;
+    }
+
+    /* Input and textarea styling */
+    .form-container form input[type="text"],
+    .form-container form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 0.9rem;
+        color: #555;
+    }
+
+    .form-container form textarea {
+        resize: vertical;
+        min-height: 80px;
+    }
+
+    /* Checkbox styling */
+    .form-container form input[type="checkbox"] {
+        margin-right: 8px;
+        transform: scale(1.2);
+    }
+
+    /* Button styling */
+    .form-container form button {
+        width: 100%;
+        padding: 10px 15px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .form-container form button:hover {
+            background-color: #0056b3;
+        }
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .form-container form {
+        padding: 15px;
+    }
+
+        .form-container form button {
+            font-size: 0.9rem;
+        }
+}

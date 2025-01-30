@@ -1,0 +1,67 @@
+﻿/* Global Styles */
+
+
+
+form {
+    background: #ffffff;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin:10px;
+}
+
+    
+    form div {
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+    form label {
+        display: block;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 8px;
+    }
+
+    form input {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        transition: border-color 0.3s;
+    }
+
+        form input:focus {
+            border-color: #6e8efb;
+            outline: none;
+            box-shadow: 0 0 4px rgba(110, 142, 251, 0.5);
+        }
+
+    
+    form span {
+        font-size: 12px;
+        color: red;
+        margin-top: 5px;
+    }
+
+
+button[type="submit"] {
+    background-color: #6e8efb;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+    button[type="submit"]:hover {
+        background-color: #5a7ae1;
+    }

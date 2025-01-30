@@ -1,0 +1,120 @@
+﻿/* Container for the admin courses */
+.admin-courses {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1200px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+    /* Heading styling */
+    .admin-courses h1 {
+        text-align: center;
+        color: #333;
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    /* Link styling for "Add New Course" */
+    .admin-courses a {
+        display: inline-block;
+        margin-bottom: 15px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+
+        .admin-courses a:hover {
+            background-color: #0056b3;
+        }
+
+    /* Table styling */
+    .admin-courses table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+        background-color: #fff;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+        /* Table header styling */
+        .admin-courses table thead th {
+            background-color: #007bff;
+            color: #fff;
+            padding: 12px;
+            font-size: 1rem;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        /* Table body styling */
+        .admin-courses table tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .admin-courses table tbody tr:hover {
+            background-color: #e9ecef;
+        }
+
+        /* Table cell styling */
+        .admin-courses table tbody td {
+            padding: 10px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+            /* Action buttons */
+            .admin-courses table tbody td a {
+                color: #007bff;
+                text-decoration: none;
+                margin-right: 10px;
+                font-size: 0.9rem;
+                transition: color 0.3s ease;
+            }
+
+                .admin-courses table tbody td a:hover {
+                    color: #0056b3;
+                }
+
+            .admin-courses table tbody td form button {
+                background-color: #dc3545;
+                color: #fff;
+                border: none;
+                padding: 5px 10px;
+                font-size: 0.9rem;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+
+                .admin-courses table tbody td form button:hover {
+                    background-color: #c82333;
+                }
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .admin-courses {
+        padding: 15px;
+    }
+
+        .admin-courses h1 {
+            font-size: 1.5rem;
+        }
+
+        .admin-courses a {
+            font-size: 0.9rem;
+        }
+
+        .admin-courses table thead th,
+        .admin-courses table tbody td {
+            font-size: 0.8rem;
+        }
+}

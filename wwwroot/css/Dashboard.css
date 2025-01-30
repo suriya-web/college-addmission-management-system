@@ -1,0 +1,173 @@
+﻿@* For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860 *@ @ {
+}
+
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+body, ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+}
+
+
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.navbar-brand a {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+.navbar-links {
+    display: flex;
+    gap: 20px;
+
+}
+
+    .navbar-links li a {
+        color: white;
+        font-size: 16px;
+        font-weight: 500;
+        text-transform: capitalize;
+        transition: color 0.3s;
+    }
+
+        .navbar-links li a:hover {
+            color: #4CAF50;
+        }
+
+
+
+@media (max-width: 768px) {
+    .navbar-links {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+
+.dashboard-container {
+    display: flex;
+    width: 100%;
+    margin: 25px;
+    padding-top: 250px;
+    padding: 20px;
+    height: 500px;
+    margin-right: 10px;
+}
+
+
+.sidebar {
+    width: 250px;
+    height: 80vh; 
+    background-color: burlywood;
+    color: black;
+    padding: 20px;
+    position: absolute; 
+    top: 10;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+    .sidebar h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .sidebar ul {
+        list-style: none;
+        padding: 0;
+    }
+
+        .sidebar ul li {
+            margin: 15px 0;
+        }
+
+            .sidebar ul li a {
+                color: black;
+                text-decoration: none;
+                font-size: 16px;
+            }
+
+                .sidebar ul li a:hover {
+                    color: #6e8efb;
+                }
+
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    
+}
+
+header {
+    background: #6e8efb;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-left: 270px;
+}
+.app{
+    
+    color: black;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-left: 270px;
+}
+
+.stats {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.card {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.activities {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}

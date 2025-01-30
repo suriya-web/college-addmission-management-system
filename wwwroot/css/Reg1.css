@@ -1,0 +1,99 @@
+﻿
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f4f6;
+   
+    align-items: center;
+    height: 100vh; 
+    margin: 0; 
+}
+
+
+form {
+    background: #ffffff;
+    padding: 2rem;
+    width: 130%;
+    max-width: 700px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; 
+    margin-left:350px;
+    margin:50px;
+}
+
+/* Labels */
+label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+
+input, button {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    outline: none;
+    width: 100%; 
+}
+
+    input:focus {
+        border-color: #6c63ff;
+        box-shadow: 0 0 5px rgba(108, 99, 255, 0.5);
+    }
+
+    input::placeholder {
+        color: #aaa;
+    }
+
+.gender-options {
+    display: flex;
+    gap: 1rem;
+}
+
+    .gender-options label {
+        font-weight: normal;
+        color: #555;
+    }
+
+.text-danger {
+    color: #e74c3c;
+    font-size: 0.85rem;
+}
+
+button {
+    background: #6c63ff;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+    button:hover {
+        background: #5753c9;
+    }
+
+    button:active {
+        background: #4a4a9e;
+    }
+
+
+@media screen and (max-width: 600px) {
+    form {
+        padding: 1.5rem;
+    }
+
+    input, button {
+        font-size: 0.9rem;
+    }
+
+    label {
+        font-size: 0.9rem;
+    }
+}

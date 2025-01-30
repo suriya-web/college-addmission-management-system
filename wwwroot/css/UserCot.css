@@ -1,0 +1,97 @@
+﻿/* General page styling */
+/*body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;*/ /* Centers horizontally */
+    /*align-items: center;*/ /* Centers vertically */
+    /*height: 100vh;*/ /* Full viewport height */
+    /*flex-direction: column;
+}*/
+
+/* Container for the form */
+form {
+    width: 500px; /* Fixed width for the form */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    align-items: center;
+}
+
+/* Form title */
+    h1 {
+    text-align: center;
+    color: #34495e;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+/* General form input styling */
+form div {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+form input,
+form textarea {
+    width: 100%; /* Make inputs and textareas take up full width of the form */
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #fafafa;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #007bff;
+    background-color: #fff;
+    outline: none;
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+/* Button styling */
+form button {
+    width: 100%; /* Make the button take up full width of the form */
+    padding: 14px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    form {
+        width: 90%; /* Adjust form width for smaller screens */
+        padding: 15px;
+    }
+
+    form input,
+    form textarea,
+    form button {
+        font-size: 1rem;
+    }
+}

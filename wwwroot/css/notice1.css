@@ -1,0 +1,99 @@
+﻿/* Container for the form */
+.notice-form-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+    /* Heading styling */
+    .notice-form-container h2 {
+        text-align: center;
+        color: #007bff;
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    /* Alert message styling */
+    .notice-form-container .alert {
+        padding: 15px;
+        margin-bottom: 20px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        font-size: 1rem;
+    }
+
+    .notice-form-container .alert-success {
+        background-color: #d4edda;
+        color: #155724;
+        border-color: #c3e6cb;
+    }
+
+    /* Form group styling */
+    .notice-form-container .form-group {
+        margin-bottom: 15px;
+    }
+
+    /* Label styling */
+    .notice-form-container label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 8px;
+        color: #333;
+        font-size: 0.9rem;
+    }
+
+    /* Input and textarea styling */
+    .notice-form-container input[type="text"],
+    .notice-form-container textarea {
+        width: 100%;
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        color: #555;
+    }
+
+    /* Textarea specific styling */
+    .notice-form-container textarea {
+        resize: vertical;
+        min-height: 120px;
+    }
+
+    /* Button styling */
+    .notice-form-container .btn {
+        display: inline-block;
+        padding: 10px 15px;
+        font-size: 1rem;
+        font-weight: bold;
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        width: 100%;
+        text-align: center;
+    }
+
+        .notice-form-container .btn:hover {
+            background-color: #0056b3;
+        }
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .notice-form-container {
+        padding: 15px;
+    }
+
+        .notice-form-container h2 {
+            font-size: 1.5rem;
+        }
+
+        .notice-form-container .btn {
+            font-size: 0.9rem;
+        }
+}
