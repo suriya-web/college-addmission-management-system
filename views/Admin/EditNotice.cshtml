@@ -1,0 +1,23 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model PublicNotice
+
+<h2>Edit Notice</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="NoticeID" />
+    <div>
+        <label>Title:</label>
+        <input asp-for="Title" />
+        <span asp-validation-for="Title"></span>
+    </div>
+    <div>
+        <label>Description:</label>
+        <textarea asp-for="Description"></textarea>
+        <span asp-validation-for="Description"></span>
+    </div>
+    <button type="submit">Save</button>
+</form>

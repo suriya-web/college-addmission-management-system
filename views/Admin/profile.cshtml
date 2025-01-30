@@ -1,0 +1,194 @@
+﻿@model collegeAdmission.Models.ProfileViewModel
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    @* <link rel="stylesheet" href="~/css/profile.css"> *@
+    @{
+        Layout = null;
+    }
+        
+    <style>
+        .btn {
+            justify-content: space-between;
+            align-items: center;
+            margin: 5px auto;
+        }
+
+        .btn {
+            background: #f8f9fa; /* Light background */
+            border-bottom: 2px solid #ddd; /* Matches the navbar style */
+            padding: 10px 20px;
+        }
+
+            .btn ul {
+                display: flex;
+                gap: 20px;
+                list-style-type: none; /* Removes bullet points */
+                margin-left: 800px;
+                padding: 0;
+            }
+
+                .btn ul li {
+                    margin: 0;
+                }
+
+                    .btn ul li a {
+                        text-decoration: none;
+                        font-size: 14px;
+                        color: #333;
+                        padding: 5px 10px;
+                        border-radius: 5px;
+                        transition: background-color 0.3s, color 0.3s;
+                    }
+
+                        .btn ul li a:hover {
+                            background-color: #ddd;
+                            color: #000;
+                        }
+
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        
+         .update-profile {
+            width: 40%;
+            margin: 50px;
+            background-color: #fff;
+            padding: 20px 70px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        } 
+        
+ 
+             .update-profile h3 {
+                text-align: center;
+                margin-bottom: 20px;
+                color: #4a90e2;
+            }
+        
+         .form-group {
+            margin-bottom: 15px;
+        }
+
+
+        label {
+            display: block;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+            input[type="text"]:focus,
+            input[type="number"]:focus,
+            input[type="email"]:focus {
+                border-color: #4a90e2;
+            }
+
+        .form-actions {
+            text-align: center;
+        }
+
+        button.save-changes-btn {
+            background-color: #4a90e2;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+            button.save-changes-btn:hover {
+                background-color: #357abd; 
+           }
+
+        </style>
+       @*  footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 14px;
+        } *@
+
+</head>
+<body>
+    <div class="btn">
+        <ul>
+            <li><a conasptroller="Admin" asp-action="Status">Status</a></li>
+            <li><a conasptroller="Admin" asp-action="SubmitFees">Submit Fees</a></li>
+            <li>
+                <a conasptroller="Admin" asp-action="AdmissionForms">Admission Form</a>
+            </li>
+            <li><a conasptroller="Admin" asp-action="profile">Profile</a></li>
+
+
+
+        </ul>
+
+
+    </div>
+    <div class="dashboard-container">
+        <div class="update-profile">
+            <h3>Update Profile</h3>
+            <form asp-action="profile" asp-controller="Admin" method="post">
+
+                <div class="form-group">
+                    <label for="name">First Name</label>
+                    <input type="text" id="FirstName" name="FirstName" value="@ViewBag.FirstName" placeholder="Enter your full name">
+                </div>
+
+                <div class="form-group">
+                    <label for="Last Name">Last Name</label>
+                    <input type="text" id="LastName" name="lastName" value="@ViewBag.LastName" placeholder="Enter your Last Name">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="number" id="phone" name="phone" value="@ViewBag.Contact" placeholder="Enter your phone number">
+                </div>
+
+                <div class="form-group">
+                    <label for="Email">Email</label>
+                    <input type="email" id="email" name="email" value="@ViewBag.Email" placeholder="Enter your Email">
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="save-changes-btn">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+        <footer>
+            <p>© 2024 - College Admission - All Rights Reserved</p>
+        </footer>
+</body>
+</html>

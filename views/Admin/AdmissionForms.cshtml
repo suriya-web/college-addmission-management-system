@@ -1,0 +1,165 @@
+﻿@model collegeAdmission.Models.AdmissionForm
+@{
+    ViewData["Title"] = "Admission Forms";
+}
+@{
+    Layout = null;
+}
+<head>
+    <link rel="stylesheet" href="~/css/admissionform.css">
+</head>
+<style>
+    .btn {
+        background: #f8f9fa; /* Light background */
+        border-bottom: 2px solid #ddd; /* Matches the navbar style */
+        padding: 10px 20px;
+    }
+
+        .btn ul {
+            display: flex;
+            gap: 20px;
+            list-style-type: none; /* Removes bullet points */
+            margin-left: 800px;
+            padding: 0;
+        }
+
+            .btn ul li {
+                margin: 0;
+            }
+
+                .btn ul li a {
+                    text-decoration: none;
+                    font-size: 14px;
+                    color: #333;
+                    padding: 5px 10px;
+                    border-radius: 5px;
+                    transition: background-color 0.3s, color 0.3s;
+                }
+
+                    .btn ul li a:hover {
+                        background-color: #ddd;
+                        color: #000;
+                    }
+
+</style>
+<body>
+    <div class="btn">
+        <ul>
+            <li><a conasptroller="Admin" asp-action="Status">Status</a></li>
+            <li><a conasptroller="Admin" asp-action="SubmitFees">Submit Fees</a></li>
+            <li>
+                <a conasptroller="Admin" asp-action="AdmissionForms">Admission Form</a>
+            </li>
+            <li><a conasptroller="Admin" asp-action="profile">Profile</a></li>
+
+
+
+        </ul>
+
+        <h1>Admission Form</h1>
+<form asp-action="AdmissionForms" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="FullName">Full Name</label>
+        <input asp-for="FullName" class="form-control" placeholder="Enter your full name" />
+        <span asp-validation-for="FullName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="PhoneNumber">Phone Number</label>
+        <input asp-for="PhoneNumber" class="form-control" placeholder="Enter your phone number" />
+        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="Email">Email</label>
+        <input asp-for="Email" class="form-control" placeholder="Enter your email" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="Address">Address</label>
+        <textarea asp-for="Address" class="form-control" placeholder="Enter your address" rows="3"></textarea>
+        <span asp-validation-for="Address" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="Program">Program</label>
+                <select asp-for="Program" class="form-control" id="programDropdown">
+            <option value="" disabled selected>Select Program</option>
+            <option value="UG">Undergraduate (UG)</option>
+            <option value="PG">Postgraduate (PG)</option>
+        </select>
+        <span asp-validation-for="Program" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="Course">Course</label>
+                <select asp-for="Course" class="form-control" id="courseDropdown">
+            <option value="" disabled selected>Select Course</option>
+            @* <option value="MCA">MCA</option> *@
+        </select>
+        <span asp-validation-for="Course" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="Marksheet10">Upload 10th Marksheet</label>
+        <input type="file" asp-for="Marksheet10" class="form-control" />
+        @* <span asp-validation-for="Marksheet10" class="text-danger"></span> *@
+    </div>
+
+    <div class="form-group">
+        <label for="Marksheet12">Upload 12th Marksheet</label>
+        <input type="file" asp-for="Marksheet12" class="form-control" />
+        @* <span asp-validation-for="Marksheet12" class="text-danger"></span> *@
+    </div>
+
+    <div class="form-group">
+        <label for="UGMarksheet">Upload UG Marksheet (Optional)</label>
+        <input type="file" asp-for="UGMarksheet" class="form-control" />
+       @*  <span asp-validation-for="UGMarksheet" class="text-danger"></span> *@
+    </div>
+
+   
+    @if (ViewData["MarksheetError"] != null)
+    {
+        <div class="alert alert-danger">
+            @ViewData["MarksheetError"]
+        </div>
+    }
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+        <script>
+            const courses = {
+                UG: ["BSc", "BCA", "BA", "BCom", "BE", "BTech", "BBA", "LLB", "BPharm"],
+                PG: ["MSc", "MCA", "MA", "MCom", "ME", "MTech", "MBA", "LLM", "MPharm"]
+            };
+
+            document.getElementById("programDropdown").addEventListener("change", function () {
+                const program = this.value;
+                const courseDropdown = document.getElementById("courseDropdown");
+
+                // Clear existing options
+                courseDropdown.innerHTML = '<option value="" disabled selected>Select Course</option>';
+
+                // Add new options based on the selected program
+                if (program && courses[program]) {
+                    courses[program].forEach(course => {
+                        const option = document.createElement("option");
+                        option.value = course;
+                        option.textContent = course;
+                        courseDropdown.appendChild(option);
+                    });
+                }
+            });
+        </script>
+        
+</div>
+</body>

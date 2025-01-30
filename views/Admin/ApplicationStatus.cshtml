@@ -1,0 +1,27 @@
+﻿@model AdmissionForm
+
+<h2>Your Application</h2>
+
+@if (Model != null)
+{
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Status</th>
+                    <th>Submitted On</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.FullName</td>
+                    <td>@Model.Status</td>
+                   
+                </tr>
+            </tbody>
+        </table>
+}
+else
+{
+        <p>No application found for your user ID.</p>
+}

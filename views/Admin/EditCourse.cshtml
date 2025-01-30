@@ -1,0 +1,68 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<head>
+    <link rel="stylesheet" href="~/css/EditCourse.css" />
+</head>
+@{
+    Layout = null;
+}
+@model Course
+<style>
+    .btn {
+        justify-content: space-between;
+        align-items: center;
+        margin: 5px auto;
+    }
+
+        .btn ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .btn li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .btn li {
+            float: left;
+        }
+
+            .btn li a:hover {
+                background-color: #111;
+            }
+</style>
+<div class="btn">
+    <ul>
+        <li><a conasptroller="Admin" asp-action="AdminCourses">Course</a></li>
+        <li>
+            <a conasptroller="Admin" asp-action="RegUsers">Reg Users </a>
+        </li>
+        <li><a conasptroller="Admin" asp-action="Applications">Applications </a></li>
+        <li><a conasptroller="Admin" asp-action="AddNotice">Notice</a></li>
+        <li><a conasptroller="Admin" asp-action="Enquiry">Enquriy </a></li>
+
+    </ul>
+    </div>
+<div class="form-container">
+<h1>Add Course</h1>
+<form asp-action="EditCourse" method="post">
+    <input type="hidden" asp-for="CourseId" />
+    <label>Course Name</label>
+    <input asp-for="CourseName" required />
+    <label>Description</label>
+    <textarea asp-for="Description" required></textarea>
+    <label>Active</label>
+    <input asp-for="IsActive" type="checkbox" />
+    <button type="submit">Save</button>
+</form>
+</div>

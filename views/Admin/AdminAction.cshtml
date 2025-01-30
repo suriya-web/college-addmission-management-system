@@ -1,0 +1,194 @@
+﻿@{
+    Layout = null;
+}
+
+
+<style>
+    .btn {
+        justify-content: space-between;
+        align-items: center;
+        margin: 5px auto;
+    }
+
+    .btn {
+        background: #f8f9fa; /* Light background */
+        border-bottom: 2px solid #ddd; /* Matches the navbar style */
+        padding: 10px 20px;
+    }
+
+        .btn ul {
+            display: flex;
+            gap: 20px;
+            list-style-type: none; /* Removes bullet points */
+            margin-left: 800px;
+            padding: 0;
+        }
+
+            .btn ul li {
+                margin: 0;
+            }
+
+                .btn ul li a {
+                    text-decoration: none;
+                    font-size: 14px;
+                    color: #333;
+                    padding: 5px 10px;
+                    border-radius: 5px;
+                    transition: background-color 0.3s, color 0.3s;
+                }
+
+                    .btn ul li a:hover {
+                        background-color: #ddd;
+                        color: #000;
+                    }
+
+
+
+        .btn input[type="button"] {
+            margin-top: 5px;
+            padding: 10px;
+            width: 8%;
+            border: none;
+            background-color: #e74c3c;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            float: right;
+        }
+
+            .btn input[type="button"]:hover {
+                background-color: #c0392b;
+            }
+
+    /* Table Container */
+    .table-responsive {
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    /* Table Style */
+    .table {
+        border-collapse: separate;
+        border-spacing: 0;
+        width: 100%;
+        margin: 0 auto;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .table-hover tbody tr:hover {
+        background-color: #f1f1f1;
+    }
+
+    /* Header Style */
+    .table thead {
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+        .table thead th {
+            text-align: center;
+            padding: 12px;
+        }
+
+    /* Cell Style */
+    .table td {
+        text-align: center;
+        padding: 15px;
+    }
+
+    /* Status Badge */
+    .badge {
+        font-size: 14px;
+        padding: 5px 10px;
+        border-radius: 10px;
+    }
+
+    /* Form Elements */
+    .form-select {
+        width: auto;
+        min-width: 150px;
+    }
+
+    form .btn {
+        padding: 5px 15px;
+        font-size: 14px;
+    }
+
+    /* Alignment Helpers */
+    .d-flex {
+        display: flex;
+    }
+
+    .gap-2 {
+        gap: 10px;
+    }
+
+
+</style>
+
+<div class="btn">
+    <ul>
+        @* <input type="button" value="Logout" onclick="logout()" /> *@
+        <li><a conasptroller="Admin" asp-action="Enquiry">Enquriy </a></li>
+        </li>
+        <li><a conasptroller="Admin" asp-action="AddNotice">Notice</a></li>
+        <li><a conasptroller="Admin" asp-action="AdminAction">Applications </a></li>
+        <li>
+            <a conasptroller="Admin" asp-action="RegUsers">Reg Users </a>
+        </li>
+
+        <li><a conasptroller="Admin" asp-action="AdminCourses">Course</a></li>
+
+    </ul>
+
+<h2 class="text-center my-4">Manage Applications</h2>
+<div class="table-responsive">
+    <table class="table table-hover shadow-sm">
+        <thead class="bg-primary text-white">
+   
+        <tr>
+            <th> ID</th>
+            <th>Name</th>
+            <th>Course</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var AdmissionForm in Model)
+
+        {
+            
+            <tr>
+                <td>@AdmissionForm.Id</td> 
+                <td>@AdmissionForm.FullName</td>
+                <td>@AdmissionForm.Course</td>
+                    <td> <span class="badge bg-info text-dark"> @AdmissionForm.Status</span></td>
+                
+                <td>
+                    <form asp-action="UpdateStatus" method="post" class="d-flex align-items-center">
+                        
+                        <input type="hidden" name="id" value="@AdmissionForm.Id" />
+                            <select name="status"  class="form-select form-select-sm">
+                            <option value="Accepted">Accepted</option>
+                            <option value="Rejected">Rejected</option>
+                            <option value="Waiting List">Waiting List</option>
+                      </select>
+
+                            <button type="submit" class="btn btn-success btn-sm">Update</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+        <script>
+            function logout() {
+            window.location.href = '@Url.Action("Login", "User")';
+            }
+
+        </script>
