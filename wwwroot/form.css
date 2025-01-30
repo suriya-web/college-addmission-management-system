@@ -1,0 +1,71 @@
+﻿/* Global Styles */
+
+
+/* Form Container */
+.form-container {
+    
+    padding: 30px;
+    border-radius: 10px;
+    
+    width: 100%;
+    max-width: 600px;
+    margin:20px;
+}
+
+    .form-container h2 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+/* Form Group */
+.form-group {
+    margin-bottom: 20px;
+}
+
+    .form-group label {
+        display: block;
+        font-weight: 500;
+        margin-bottom: 5px;
+        color: #555;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #6e8efb;
+            outline: none;
+        }
+
+textarea {
+    resize: none;
+}
+
+/* Button */
+.form-btn {
+    display: block;
+    width: 100%;
+    background: #6e8efb;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+    .form-btn:hover {
+        background: #5a7ae1;
+    }
