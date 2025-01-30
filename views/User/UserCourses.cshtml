@@ -1,0 +1,27 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<head>
+    <link rel="stylesheet" href="~/css/UserCourse.css">
+</head>
+@model List<Course>
+<h1>Available Courses</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var course in Model)
+        {
+            <tr>
+                <td>@course.CourseName</td>
+                <td>@course.Description</td>
+            </tr>
+        }
+    </tbody>
+</table>

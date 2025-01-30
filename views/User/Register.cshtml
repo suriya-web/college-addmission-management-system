@@ -1,0 +1,97 @@
+﻿<head>
+    <link rel="stylesheet" href="~/css/Reg1.css">
+</head>
+@model RegisterViewModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<form asp-action="Register" method="post">
+    
+    <div>
+        <h1>Signup</h1>
+        <label for="FirstName">First Name</label>
+        <input asp-for="FirstName" placeholder="First Name" />
+        <span asp-validation-for="FirstName" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label for="LastName">Last Name</label>
+        <input asp-for="LastName" placeholder="Last Name" />
+        <span asp-validation-for="LastName" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label for="DateOfBirth">Date of Birth</label>
+        <input asp-for="DateOfBirth" type="date" placeholder="Date of Birth"/>
+        <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label for="Gender">Gender</label>
+        <div class="gender-options">
+            <label>
+                <input type="radio" asp-for="Gender" value="Male" /> Male
+            </label>
+            <label>
+                <input type="radio" asp-for="Gender" value="Female"/> Female
+            </label>
+        </div>
+        <span asp-validation-for="Gender" class="text-danger"></span>
+    </div>
+
+
+
+    <div>
+        <label for="Contact">Contact</label>
+        <input asp-for="Contact" placeholder="Contact" />
+        <span asp-validation-for="Contact" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label for="EmailAddress">Email</label>
+        <input asp-for="EmailAddress" type="email" placeholder="Email" />
+        <span asp-validation-for="EmailAddress" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label for="Address">Address</label>
+        <input asp-for="Address" placeholder="Address" />
+        <span asp-validation-for="Address" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label for="State">State</label>
+        <input asp-for="State" placeholder="State" />
+        <span asp-validation-for="State" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label for="City">City</label>
+       
+        <input asp-for="City" placeholder="City" />
+        <span asp-validation-for="City" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label for="Username">Username</label>
+        <input asp-for="Username" placeholder="Username" />
+        <span asp-validation-for="Username" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label for="Password">Password</label>
+        <input asp-for="Password" type="password" placeholder="Password" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+    <div>
+        <label for="Password">Confirm Password</label>
+        <input asp-for="Password" type="password" placeholder="Password" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+    <button type="submit">Register</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

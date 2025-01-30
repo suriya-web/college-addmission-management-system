@@ -1,0 +1,38 @@
+﻿@model Enquiry
+@{
+    ViewData["Title"] = "Contact ";
+}
+<head>
+    <link rel="stylesheet" href="~/css/UserCot.css">
+</head>
+
+<h1>Contact Us</h1>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+
+<form asp-action="Contact" method="post">
+    <div>
+        <label for="FirstName">First Name</label>
+        <input asp-for="FirstName" id="FirstName" required />
+    </div>
+    <div>
+        <label for="LastName">Last Name</label>
+        <input asp-for="LastName" id="LastName" required />
+    </div>
+    <div>
+        <label for="Gmail">Email</label>
+        <input asp-for="Gmail" id="Gmail" type="email" required />
+    </div>
+    <div>
+        <label for="Contact">Contact</label>
+        <input asp-for="Contact" id="Contact" />
+    </div>
+    <div>
+        <label for="Message">Message</label>
+        <textarea asp-for="Message" id="Message" required></textarea>
+    </div>
+    <button type="submit">Send Message</button>
+</form>

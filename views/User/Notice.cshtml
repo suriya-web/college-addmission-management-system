@@ -1,0 +1,29 @@
+﻿@model List<collegeAdmission.Models.PublicNotice>
+
+@{
+    ViewData["Title"] = "Public Notices";
+}
+<head>
+    <link rel="stylesheet" href="~/css/Notice2.css">
+</head>
+<h2>Public Notices</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Created Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var notice in Model)
+        {
+            <tr>
+                <td>@notice.Title</td>
+                <td>@notice.Description</td>
+                <td>@notice.CreatedDate.ToString("g")</td>
+            </tr>
+        }
+    </tbody>
+</table>
