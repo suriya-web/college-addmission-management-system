@@ -1,0 +1,89 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MyApplication</title>
+    <link rel="stylesheet" href="~/css/newnav.css"> 
+    <style>
+        .navbar-links{
+        text-transform:none;
+        }
+        #customers {
+        font-family: Arial, Helvetica, sans-serif;
+
+        width: 100%;
+        }
+
+        #customers td, #customers th {
+
+        padding: 8px;
+        }
+
+        
+        #customers th {
+        font-style:bold; 
+
+        #customers th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+
+        color: white;
+        }
+
+        .Logo{
+            position:absolute;
+            top:10px;
+            left:80px;
+            
+        }
+
+    </style>
+
+</head>
+<body>
+    <div>
+        <nav class="navbar">
+            <div class="container">
+                <div class="navbar-brand">
+                    <div>
+                    <img src="~/images/college.png" alt="Logo" class="Logo" height="40px" width="60px" style="position:absolute; top:12px; left:27px;" />
+                </div>
+                </div>
+                
+                    <ul class="navbar-links">
+                        <li><a asp-controller="User" asp-action="Home">Home</a></li>
+                    <li><a asp-controller="Admin" asp-action="AboutUs">AboutUs</a></li>
+                <li><a asp-controller="User" asp-action="Login">SignIn</a></li>
+                <li><a asp-controller="User" asp-action="Register">Signup</a></li>
+                        <li><a asp-controller="User" asp-action="Contact">Contact</a></li>
+                       
+                        <li><a asp-controller="User" asp-action="UserCourses">Courses</a></li>
+                        <li><a asp-controller="User" asp-action="Notice">Public Notice</a></li>
+                
+                    </ul>
+                    </div>
+                    </nav>
+         </div>
+    
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - collegeAdmission - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer> 
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+    
+</body>
+</html>
